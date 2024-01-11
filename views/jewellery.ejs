@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Product</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <!-- header section strats -->
+  <header class="header_section" style="border-style: hidden;">
+    <!-- rate display start -->
+    <div class="d-flex justify-content-end announcement_text rates-column" style="margin-right: 15px;">
+      <div class="p">
+          <div class="topbar_tooltip ">
+              <span class="rates-heading">
+                  Metal Rates
+              </span>
+              <span class="topbar_tooltiptext" style="background-color:  #9D130F; margin-top :15px;">
+                  <div class="paragraph">
+                      <p><strong>Today's Metal Rates (Per gm in Rs.)</strong><br>
+                          *Rates may vary in reality, so confirm it on the phone
+                      </p>
+                  </div>
+                  <table class="table table-borderless">
+                      <tbody>
+                          <tr>
+                              <td>Gold 24 KT</td>
+                              <td id="rates-24">
+                                  <%= metalRates.newGoldRateValue24 %>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Gold 22 KT</td>
+                              <td id="rates-22">
+                                  <%= metalRates.newGoldRateValue22 %>
+
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Gold 18 KT</td>
+                              <td id="rates-18">
+                                  <%= metalRates.newGoldRateValue18 %>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Silver</td>
+                              <td id="rates-sil">
+                                  <%= metalRates.newSilverRateValue %>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </span>
+          </div>
+      </div>
+      <div class="p cta"><a href="tel:+917888124488"> <span class="mob-no">Call +91 7888124488</span></a>
+      </div>
+  </div>
+    <!-- rate display end -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container justify-content-center">
+        <ul class="nav">
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link active" aria-current="page"
+              href="\">Home</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link" href="#Regular">Regular</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link" href="#Kundan">Kundan</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link" href="#Temple">Temple</a>
+          </li>
+        </ul>
+        <a href="\">
+          <img src="images/logo.png" alt="logo.png" class="logo">
+        </a>
+        <ul class="nav">
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link" href="#Diamond">Diamond</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link" href="#Kisna">Kisna</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link" href="#Other">Other</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link" href="#Silver">Silver</a>
+          </li>
+
+        </ul>
+
+
+
+
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- Display items categoriwise -->
+  <% Object.keys(itemsByCategory).forEach(category=> { %>
+    <div class="item-container-product" id="<%= category %>">
+      <div class="category-section">
+        <h2 class="product-heading">
+          <%= category %>
+        </h2>
+        <div class="item-container">
+          <% itemsByCategory[category].forEach(item=> { %>
+            <div class="product-item">
+              <h2 class="item-heading">
+                <%= item.name %>
+              </h2>
+              <img src="data:image/png;base64,<%= item.image.toString('base64') %>" alt="<%= item.name %>">
+              <div class="info-container">
+                <p>Category: <%= item.category %>
+                </p>
+                <p>Weight:<%= item.weight %>
+                </p>
+                <p>Purity: <%= item.purity %>
+                </p>
+                <p>ID: <%= item.id %>
+                </p>
+                <p>
+                  <%= item.description %>
+                </p>
+              </div>
+            </div>
+            <% }); %>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+
+      <!-- info section -->
+      <section class="info_section ">
+        <div class="container">
+          <div class="info_container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="info_logo">
+                  <a href="">
+                    <img src="images/logo.png" alt="">
+                    <span>
+                      मे श्री बाबुराव महादू घोडके सराफ
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="info_contact">
+                  <a href="">
+                    <img src="images/location.png" alt="">
+                    <span>
+                      Baburao mahadu Ghodke Saraf (BMG),
+                      Bazar Peth, Lasalgaon,
+                      Tal- Niphad, Dist- Nasik
+                      Maharastra.
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="info_contact">
+                  <a href="tel:+91 7888124488">
+                    <img src="images/phone.png" alt="">
+                    <span>
+                      +91 7888124488
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="info_contact">
+                  <a href="">
+                    <img src="images/mail.png" alt="">
+                    <span>
+                      bmg.saraf@gmail.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="info_social">
+              <div class="d-flex justify-content-center">
+                <h5 class="info_heading">
+                  Follow Us
+                </h5>
+              </div>
+              <div class="social_box">
+                <a href="https://www.instagram.com/ms_baburao_mahadu_ghodke_saraf?igsh=aWF3eTgxemlpbzh4">
+                  <img src="images/insta.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/BmGhodkeJewellers?mibextid=2JQ9oc">
+                  <img src="images/fb.png" alt="">
+                </a>
+                <a href="">
+                  <img src="images/twitter.png" alt="">
+                </a>
+                <a href="">
+                  <img src="images/linkedin.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Floating Back to Home Button -->
+        <div class="back-to-home-button">
+          <!-- <a href="#" class="btn btn-primary">Back to Home</a> -->
+          <a href="#">
+            <img src="images/top.png" alt="" width="205px">
+          </a>
+        </div>
+        <script src="js/back_to_top.js"></script>
+      </section>
+      <!-- end info_section -->
+
+      <!-- footer section -->
+      <section class="container-fluid footer_section">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">BMGhodakejewellers</a>
+        </p>
+      </section>
+      <!-- footer section -->
+
+      <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+      <script src="js/jewellery.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

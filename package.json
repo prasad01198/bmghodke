@@ -1,0 +1,31 @@
+{
+  "name": "bmghodkejewellers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql"
+  ],
+  "author": "Prasad Gadekar",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.7.0"
+  },
+  "engines": {
+    "node": ">=21.5.0",
+    "npm": ">=9.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prasad01198/bmghodke"
+  }
+}

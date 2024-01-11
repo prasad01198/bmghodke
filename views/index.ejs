@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title> मे श्री बाबुराव महादू घोडके सराफ</title>
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap"
+        rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+
+    <style>
+        #recentItemsContainer {
+            display: block;
+            opacity: 0;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- header section strats -->
+
+    <header class="header_section">
+        <!-- rate display start -->
+        <div class="d-flex justify-content-end announcement_text rates-column" style="margin-right: 15px;">
+            <div class="p">
+                <div class="topbar_tooltip ">
+                    <a href="/admin-login">
+                        <img src="images/user.png" alt="" width="40px" height="35px">
+                    </a>
+                    <span class="rates-heading">
+                        Metal Rates
+                    </span>
+                    <span class="topbar_tooltiptext" style="background-color:  #9D130F; margin-top :15px;">
+                        <div class="paragraph">
+                            <p><strong>Today's Metal Rates (Per gm in Rs.)</strong><br>
+                                *Rates may vary in reality, so confirm it on the phone
+                            </p>
+                        </div>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td>Gold 24 KT</td>
+                                    <td id="rates-24">
+                                        <%= metalRates.newGoldRateValue24 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gold 22 KT</td>
+                                    <td id="rates-22">
+                                        <%= metalRates.newGoldRateValue22 %>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gold 18 KT</td>
+                                    <td id="rates-18">
+                                        <%= metalRates.newGoldRateValue18 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Silver</td>
+                                    <td id="rates-sil">
+                                        <%= metalRates.newSilverRateValue %>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </span>
+                </div>
+            </div>
+            <div class="p cta"><a href="tel:+917888124488"> <span class="mob-no">Call +91 7888124488</span></a>
+            </div>
+        </div>
+        <!-- rate display end -->
+        
+        <!-- navigation start -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container justify-content-center">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link active"
+                            aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#products">Latest Arrived</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#schemes">what we offer</a>
+                    </li>
+                </ul>
+                <a href="/">
+                    <img src="images/logo.png" alt="logo.png" class="logo">
+                </a>
+                <ul class="nav nav-2">
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#schemes2">Our Ongoing Schemes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#testimonial">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#socialMedia">Follow Us</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <!-- nevigation end -->
+
+    </header>
+
+    <!-- end header section -->
+
+    <div class="hero_area">
+        <!-- slider section -->
+
+        <section class="slider_section position-relative">
+            <div class="design-box">
+                <img src="images/design-1.png" alt="">
+            </div>
+            <div class="slider_number-container d-none d-md-block">
+                <div class="number-box">
+                    <hr>
+                    <span class="jwel">
+                        B <br>
+                        M <br>
+                        G <br>
+                    </span>
+                    <hr>
+                </div>
+            </div>
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail_box">
+                                        <h2>
+                                            <span> our Collection</span>
+                                            <hr>
+                                        </h2>
+                                        <h1>
+                                            Temple Jewellery
+                                        </h1>
+                                        <p>
+                                            We offers a diverse selection of the most recent temple jewelry.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="images/banner1.png" alt="banner1.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail_box">
+                                        <h2>
+                                            <span> our Collection</span>
+                                            <hr>
+                                        </h2>
+                                        <h1>
+                                            Traditional Jewellery
+                                        </h1>
+                                        <p>
+                                            We offers a wide selection of the most recent traditional gold jewelry.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="images/banner2.png" alt="banner2.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail_box">
+                                        <h2>
+                                            <span> our Collection</span>
+                                            <hr>
+                                        </h2>
+                                        <h1>
+                                            Diamond Jewellery
+                                        </h1>
+                                        <p>
+                                            We offers a diverse selection of the most recent Diamond jewelry.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="images/banner3.jpg" alt="banner3.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail_box">
+                                        <h2>
+                                            <span> our Collection</span>
+                                            <hr>
+                                        </h2>
+                                        <h1>
+                                            Kundan Jewellery
+                                        </h1>
+                                        <p>
+                                            We offers a diverse selection of the most recent Kundan jewelry.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="images/banner4.png" alt="banner3.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end slider section -->
+    </div>
+
+    <!-- latest arrival start -->
+    <div id="products" class="latest-arrival" style="background-color: rgba(255, 255, 255, 0.362);">
+        <div class="heading_container" style="margin-top: 15px; margin-left:55px;">
+            <h2>
+                Latest Arrivals
+            </h2>
+        </div>
+        <div id="itemContainer" class="itemContainer">
+            <div class="row home-row">
+                <% items.forEach(item=> { %>
+                    <div class="home-item">
+                        <h2 class="item-heading">
+                            <%= item.name%>
+                        </h2>
+                        <div class="image-overlay">
+                            <img src="data:image/png;base64,<%= item.image.toString('base64') %>"
+                                alt="<%= item.name %>">
+                        </div>
+                        <div class="info-container">
+                            <p>ID: <%= item.id %>
+                            </p>
+                            <p>Category: <%= item.category %>
+                            </p>
+                            <p>Weight: <%= item.weight %>
+                            </p>
+                            <p>Purity: <%= item.purity %>
+                            </p>
+                            <p>
+                                <%= item.description %>
+                            </p>
+                            <a href="/jewellery">
+                                <button type="button" class="btn btn-outline-secondary" data-mdb-ripple-init=""
+                                    data-mdb-ripple-color="dark" style="border-style: hidden;">Explore More</button>
+                            </a>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </div>
+    <!-- latest arrival end -->
+
+    <!-- about section -->
+    <section id="about" class="about_section layout_padding2-top layout_padding-bottom">
+        <div class="design-box">
+            <img src="images/design-2.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                About Us
+                            </h2>
+                        </div>
+                        <p>
+                            Baburao Mahadu Ghodke, the founder of BMG firm, started the venture in 1960 with dedication
+                            and vision
+                            despite initial challenges. With four sons supporting, the business grew. Sharad, with keen
+                            business
+                            interest, played a pivotal role after graduation. Dattatraya contributed with his
+                            ornament-making skills.
+                            <br> <br>
+                            The choice of Lasalgaon, Asia's top onion market, was strategic, attracting a diverse
+                            customer base. In
+                            1990, the business expanded its showroom. However, tragedy struck in 2006 with the sudden
+                            demise of
+                            Baburao Ghodke. <br> <br>
+
+                            Abhishek Ghodke, grandson of Baburao, emerged as a dynamic leader. Armed with a B.Com
+                            degree, a diploma in
+                            business management, and jewelry designing expertise, Abhishek injected new life into the
+                            business. He
+                            embraced technology, introducing barcoding for efficient inventory management. <br> <br>
+
+                            Abhishek's marketing prowess and strategic initiatives, such as partnering with the D'damas
+                            Group,
+                            elevated the brand. He implemented festive decorations, brochures, and lucky draw schemes to
+                            attract
+                            customers. Technological advancements like CCTV cameras enhanced security. <br> <br>
+
+                            Despite the loss of the visionary founder, Abhishek's passion, creativity, and business
+                            acumen steered BMG
+                            to new heights. The firm's commitment to quality, competitive pricing, and customer service
+                            established
+                            enduring relationships.
+                        </p>
+                        <div>
+                            <a href="/about">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="images/about-img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end about section -->
+
+    <!-- Schemes section -->
+    <section id="schemes" class="price_section layout_padding">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    Our Schemes
+                </h2>
+            </div>
+            <div class="price_container">
+                <div class="box scheme-box">
+                    <div class="name">
+                        <h4 class="scheme-heading">
+                            धनसंचय योजना
+                        </h4 class="scheme-heading">
+                    </div>
+                    <div>
+                        <img src="images/scheme.png" alt="" class="scheme-img">
+                    </div>
+                    <div class="detail-box">
+                        <a href="/Schemes">
+                            Know more
+                        </a>
+                    </div>
+                </div>
+                <div class="box scheme-box">
+                    <div class="name">
+                        <h4 class="scheme-heading">
+                            सुवर्ण सिद्धी इंस्टॉलमेंट प्लॅन
+                        </h4 class="scheme-heading">
+                    </div>
+                    <div>
+                        <img src="images/scheme2.png" alt="" class="scheme-img">
+                    </div>
+                    <div class="detail-box">
+                        <a href="/Schemes">
+                            Know more
+                        </a>
+                    </div>
+                </div>
+                <div class="box scheme-box">
+                    <div class="name">
+                        <h4 class="scheme-heading">
+                            सुवर्ण संचय योजना
+                        </h4 class="scheme-heading">
+                    </div>
+                    <div>
+                        <img src="images/scheme3.png" alt="" class="scheme-img">
+                    </div>
+                    <div class="detail-box">
+                        <a href="/Schemes">
+                            Know more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Schemes section -->
+
+    <!-- Scheme 2 -->
+    <div id="schemes2" class="container">
+        <div class="heading_container" style="margin-top: 15px;">
+            <h2>
+                Our Ongoing Schemes
+            </h2>
+        </div>
+        <div id="schemesContainer" class="index-scheme-container">
+            <% schemes.forEach(scheme=> { %>
+                <div class="scheme-container">
+                    <h2 class="scheme-title">
+                        <%= scheme.title %>
+                    </h2>
+                    <hr class="line">
+                    <% if (scheme.description) { %>
+                        <div class="scheme-description">Description: <%= scheme.description %>
+                        </div>
+                        <% } %>
+                            <% if (scheme.image1) { %>
+                                <div class="carousel" id="uniqueCarousel">
+                                    <div class="carousel-item scheme-image active">
+                                        <img class="home-scheme-img"
+                                            src="data:image/png;base64,<%= scheme.image1.toString('base64') %>"
+                                            alt="<%= scheme.title %> Image 1">
+                                    </div>
+                                    <% } %>
+                                        <% if (scheme.image2) { %>
+                                            <div class="carousel-item scheme-image">
+                                                <img class="home-scheme-img"
+                                                    src="data:image/png;base64,<%= scheme.image2.toString('base64') %>"
+                                                    alt="<%= scheme.title %> Image 2">
+                                            </div>
+                                            <% } %>
+                                                <% if (scheme.image3) { %>
+                                                    <div class="carousel-item scheme-image">
+                                                        <img class="home-scheme-img"
+                                                            src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
+                                                            alt="<%= scheme.title %> Image 3">
+                                                    </div>
+                                                    <% } %>
+                                                        <% if (scheme.image4) { %>
+                                                            <div class="carousel-item scheme-image">
+                                                                <img class="home-scheme-img"
+                                                                    src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
+                                                                    alt="<%= scheme.title %> Image 4">
+                                                            </div>
+                                                            <% } %>
+                                </div>
+
+                </div>
+                <% }); %>
+        </div>
+    </div>
+    <!-- scheme 2 end -->
+
+    <!-- client section -->
+    <section id="testimonial" class="client_section">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    Testimonial
+                </h2>
+            </div>
+            <h4 class="secondary_heading">
+                What our customer has to say
+            </h4>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="client_container">
+                            <div class="client-id">
+                            </div>
+                            <div class="detail-box">
+                                <video class="test-video" src="videos/test1.mp4" controls poster="thumbnail.jpg"
+                                    width="640" height="360"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client_container">
+                            <div class="client-id">
+                            </div>
+                            <div class="detail-box">
+                                <video class="test-video" src="videos/test2.mp4" controls poster="thumbnail.jpg"
+                                    width="640" height="360"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="client_container">
+                            <div class="client-id">
+                            </div>
+                            <div class="detail-box">
+                                <video class="test-video" src="videos/test1.mp4" controls poster="thumbnail.jpg"
+                                    width="640" height="360"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- end client section -->
+
+    <!-- contact section -->
+    <section id="contact" class="contact_section layout_padding">
+        <div class="design-box">
+            <img src="images/design-2.png" alt="">
+        </div>
+        <div class="container ">
+            <div class="">
+                <h2 class="">
+                    Contact Us
+                </h2>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="">
+                        <div>
+                            <input type="text" placeholder="Name" />
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Phone" />
+                        </div>
+                        <div>
+                            <input type="text" class="message-box" placeholder="Message" />
+                        </div>
+                        <div class="d-flex ">
+                            <button>
+                                SEND
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="map_container">
+                        <div class="map-responsive">
+                            <iframe
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=M%2FS+Shri+Baburao+Mahadu+Ghodke"
+                                width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end contact section -->
+
+    <!-- info section -->
+    <section class="info_section ">
+        <div class="container">
+            <div class="info_container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="info_logo">
+                            <a href="">
+                                <img src="images/logo.png" alt="">
+                                <span>
+                                    मे श्री बाबुराव महादू घोडके सराफ
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info_contact">
+                            <a href="">
+                                <img src="images/location.png" alt="">
+                                <span>
+                                    Baburao mahadu Ghodke Saraf <br>
+                                    Bazar Peth, Lasalgaon, <br>
+                                    Tal- Niphad, Dist- Nasik <br>
+                                    Maharastra.
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info_contact">
+                            <a href="">
+                                <img src="images/phone.png" alt="">
+                                <span>
+                                    +91 7888124488
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info_contact">
+                            <a href="">
+                                <img src="images/mail.png" alt="">
+                                <span>
+                                    bmg.saraf@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="socialMedia" class="info_social">
+                    <div class="d-flex justify-content-center">
+                        <h5 class="info_heading">
+                            Follow Us
+                        </h5>
+                    </div>
+                    <div class="social_box">
+                        <a href="https://www.instagram.com/ms_baburao_mahadu_ghodke_saraf?igsh=aWF3eTgxemlpbzh4">
+                            <img src="images/insta.png" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/BmGhodkeJewellers?mibextid=2JQ9oc">
+                            <img src="images/fb.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/twitter.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/linkedin.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Back to Home Button -->
+        <div class="back-to-home-button">
+            <!-- <a href="#" class="btn btn-primary">Back to Home</a> -->
+            <a href="#">
+                <img src="images/top.png" alt="" width="205px">
+            </a>
+        </div>
+        <script src="js/back_to_top.js"></script>
+    </section>
+    <!-- end info_section -->
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+        <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="https://html.design/">BMGhodakejewellers</a>
+        </p>
+    </section>
+
+    <!-- footer section -->
+
+    <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/back_to_top.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Script to show/hide Back to Home button on scroll -->
+</body>
+
+</html>

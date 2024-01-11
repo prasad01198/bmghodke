@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title> मे श्री बाबुराव महादू घोडके सराफ</title>
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap"
+        rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- header section strats -->
+    <header class="header_section">
+
+        <!-- rate display start -->
+        <div class="d-flex justify-content-end announcement_text rates-column">
+            <div class="p">
+                <div class="topbar_tooltip ">
+                    <span class="rates-heading">
+                        Metal Rates
+                    </span>
+                    <span class="topbar_tooltiptext" style="background-color:  #9D130F; margin-top :15px;">
+                        <div class="paragraph">
+                            <p><strong>Today's Metal Rates (Per gm in Rs.)</strong><br>
+                                *Rates may vary in reality, so confirm it on the phone
+                            </p>
+                        </div>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td>Gold 24 KT</td>
+                                    <td id="rates-24">
+                                        <%= metalRates.newGoldRateValue24 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gold 22 KT</td>
+                                    <td id="rates-22">
+                                        <%= metalRates.newGoldRateValue22 %>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gold 18 KT</td>
+                                    <td id="rates-18">
+                                        <%= metalRates.newGoldRateValue18 %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Silver</td>
+                                    <td id="rates-sil">
+                                        <%= metalRates.newSilverRateValue %>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </span>
+                </div>
+            </div>
+            <div class="p cta"><a href="tel:+917888124488"> <span class="mob-no">Call +91 7888124488</span></a>
+            </div>
+        </div>
+        <!-- rate display end -->
+
+        <!-- navigation start -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container justify-content-center">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link active"
+                            aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="jewellery.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="Schemes.html">what we offer</a>
+                    </li>
+                </ul>
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="logo.png" class="logo">
+                </a>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#manage">Manage pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#products">Your listings</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                            href="#schemes">Ongoing schemes</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <!-- nevigation end -->
+    </header>
+    <!-- end header section -->
+
+    <div class="container mt-4" id="manage">
+        <div class="row">
+            <!-- Add Item Start -->
+            <div class="col-md-4 pt-2 work-form">
+                <div class="heading_container">
+                    <h2>
+                        Add Item
+                    </h2>
+                </div>
+                <hr class="line">
+                <form id="addItemForm" enctype="multipart/form-data" action="/addItem" method="post">
+
+                    <!-- item image -->
+                    <label class="form-label" for="itemImage">Add Image</label>
+                    <input type="file" class="form-control" id="itemImage" name="itemImage" accept="image/*" required />
+
+                    <!-- item id -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="itemId">ID</label>
+                        <input type="text" id="itemId" name="itemId" class="form-control" />
+                    </div>
+
+                    <!-- item Name -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="itemName">Name</label>
+                        <input type="text" id="itemName" name="itemName" class="form-control" />
+                    </div>
+
+                    <!-- item Category -->
+                    <label class="form-label" for="itemCategory">Category</label>
+                    <select class="form-select" id="itemCategory" name="itemCategory"
+                        aria-label="Default select example">
+                        <option selected>Category</option>
+                        <option value="Kundan">Kundan</option>
+                        <option value="Temple">Temple</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Diamond">Diamond</option>
+                        <option value="Kisna">Kisna</option>
+                        <option value="Other">Other</option>
+                        <option value="Silver">Silver</option>
+                    </select>
+
+                    <!-- Item Weight -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="itemWeight">Weight</label>
+                        <input type="text" id="itemWeight" name="itemWeight" class="form-control" />
+                    </div>
+
+                    <!-- Item Purity -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="itemPurity">Purity</label>
+                        <input type="text" id="itemPurity" name="itemPurity" class="form-control" />
+                    </div>
+
+                    <!-- Item Description -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="itemDescription">Description</label>
+                        <textarea class="form-control" id="itemDescription" name="itemDescription" rows="4"></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-warning btn-block mb-2">Add Item</button>
+                </form>
+            </div>
+            <!-- Add Item End -->
+
+            <!-- Add Schemes Start -->
+            <div class="col-md-4 pt-2 work-form">
+                <div class="heading_container">
+                    <h2>
+                        Add Scheme
+                    </h2>
+                </div>
+                <hr class="line">
+                <form id="adminForm" enctype="multipart/form-data" action="/addScheme" method="post">
+                    <!-- Text input -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="title">Name</label>
+                        <input type="text" id="title" name="title" class="form-control" required />
+                    </div>
+
+                    <label class="form-label" for="image1">Add Image 1</label>
+                    <input type="file" class="form-control" id="image1" name="image1" accept="image/*" required />
+
+                    <label class="form-label" for="image2">Add Image 2</label>
+                    <input type="file" class="form-control" id="image2" name="image2" accept="image/*" />
+
+                    <label class="form-label" for="image3">Add Image 3</label>
+                    <input type="file" class="form-control" id="image3" name="image3" accept="image/*" />
+
+                    <label class="form-label" for="image4">Add Image 4</label>
+                    <input type="file" class="form-control" id="image4" name="image4" accept="image/*" />
+
+                    <!-- Message input -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="description">Description</label>
+                        <textarea class="form-control" id="description" name="description"></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-warning btn-block mb-2">Add Scheme</button>
+                </form>
+
+            </div>
+            <!-- Add Schemes End -->
+
+            <!-- Rate updates Start -->
+            <div class="col-md-3 pt-2 work-form">
+                <div class="heading_container">
+                    <h2>
+                        Metal Rates
+                    </h2>
+                </div>
+                <hr class="line">
+                <form action="/updateRates" method="post">
+                    <!-- Text input -->
+                    <label class="form-label" for="rate24">24 CT</label>
+                    <div class="form-outline mb-2">
+                        <input type="number" id="rate24" name="rate24" step="0.01" required class="form-control" />
+                    </div>
+                    <!-- Text input -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="rate22">22 CT</label>
+                        <input type="number" id="rate22" name="rate22" step="0.01" required class="form-control" />
+                    </div>
+                    <!-- Text input -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="rate18">18 CT</label>
+                        <input type="number" id="rate18" name="rate18" step="0.01" required class="form-control" />
+                    </div>
+                    <!-- Text input -->
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="rateSil">Silver</label>
+                        <input type="number" id="rateSil" name="rateSil" step="0.01" required class="form-control" />
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-warning btn-block mb-2">Update Rates</button>
+                </form>
+            </div>
+            <!-- Rate Update End -->
+        </div>
+    </div>
+
+    <div class="product-heading" style="font-size: 25px;" id="items">
+        Listed Items
+    </div>
+
+    <div id="itemContainer">
+        <div class="admin-items">
+            <% items.forEach(item=> { %>
+                <div class="admin-item">
+                    <img src="data:image/png;base64,<%= item.image.toString('base64') %>" alt="<%= item.name %>">
+                    <p>ID: <%= item.id %>
+                    </p>
+                    <button class="deleteButton" onclick="deleteItem('<%= item.id %>')">Delete Item</button>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+    <!-- Schemes Container Start -->
+    <div class="product-heading" style="font-size: 25px;" id="schemes">
+        Listed Schemes
+    </div>
+    <div id="schemesContainer" class="admin-scheme-display-container">
+        <% schemes.forEach(scheme=> { %>
+            <div class="admin-scheme-container">
+                <h2 class="admin-scheme-heading">
+                    <%= scheme.title %>
+                </h2>
+                <% if (scheme.image1) { %>
+                    <img src="data:image/png;base64,<%= scheme.image1.toString('base64') %>"
+                        alt="<%= scheme.title %> Image 1">
+                    <% } %>
+                        <% if (scheme.image2) { %>
+                            <img src="data:image/png;base64,<%= scheme.image2.toString('base64') %>"
+                                alt="<%= scheme.title %> Image 2">
+                            <% } %>
+
+                                <% if (scheme.image3) { %>
+                                    <img src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
+                                        alt="<%= scheme.title %> Image 3">
+                                    <% } %>
+                                        <% if (scheme.image4) { %>
+                                            <img src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
+                                                alt="<%= scheme.title %> Image 4">
+                                            <% } %>
+                                                <% if (scheme.description) { %>
+                                                    <p>Description: <%= scheme.description %>
+                                                    </p>
+                                                    <% } %>
+
+                                                        <div class="admin-buttons-container">
+                                                            <button class="scheme-delete-btn"
+                                                                onclick="deleteScheme('<%= scheme.id %>')">Delete</button>
+                                                            <button class="scheme-edit-btn"
+                                                                onclick="editDescription('<%= scheme.id %>')">Edit
+                                                                Description</button>
+                                                        </div>
+            </div>
+            <% }); %>
+    </div>
+    <!-- Schemes Container End -->
+
+    <!-- Metal Rates Display -->
+    <div class="col-md-3 pt-2 work-form">
+        <div class="heading_container">
+            <h2>
+                Metal Rates
+            </h2>
+        </div>
+        <hr class="line">
+        <div>
+            <p>24 CT: <span id="rates-24">
+                    <%= metalRates.newGoldRateValue24 %>
+                </span></p>
+            <p>22 CT: <span id="rates-22">
+                    <%= metalRates.newGoldRateValue22 %>
+                </span></p>
+            <p>18 CT: <span id="rates-18">
+                    <%= metalRates.newGoldRateValue18 %>
+                </span></p>
+            <p>Silver: <span id="rates-sil">
+                    <%= metalRates.newSilverRateValue %>
+                </span></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script>
+        function deleteItem(itemId) {
+            // AJAX request to delete item
+            fetch('/deleteItem', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ itemId: itemId }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // You can handle the response as needed, e.g., refreshing the page
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // Similarly, define deleteScheme function if it's not defined
+        function deleteScheme(schemeId) {
+            // AJAX request to delete scheme
+            fetch('/deleteScheme', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ schemeId: schemeId }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // You can handle the response as needed, e.g., refreshing the page
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // Edit scheme logic
+
+        function editDescription(schemeId) {
+            const newDescription = prompt('Enter the new description:');
+            if (newDescription !== null) {
+                // AJAX request to update scheme description
+                fetch('/editSchemeDescription', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ schemeId: schemeId, newDescription: newDescription }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        // You can handle the response as needed, e.g., refreshing the page
+                        location.reload();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        }
+    </script>
+
+</body>
+
+</html>
