@@ -9,10 +9,11 @@ const app = express();
 const port = 3000;
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Prasad@1998',
+    host: 'mysql-38d2824e-bmghodkejewelers.a.aivencloud.com',
+    user: 'avnadmin',
+    password: 'AVNS_v-qbSU6D5fovblW2O97',
     database: 'admin_bmg',
+    port : 22509,
 });
 
 connection.connect((err) => {
@@ -76,6 +77,8 @@ const fetchDataMiddleware = (req, res, next) => {
 // Routes
 
 app.get('/', fetchDataMiddleware, (req, res) => {
+    res.locals.metalRates = res.locals.metalRates || {};
+
     const recentItems = res.locals.items.slice(0, 10);
     res.render('index', { items: recentItems, schemes: res.locals.schemes, metalRates: res.locals.metalRates });
 });
@@ -97,6 +100,7 @@ app.get('/Schemes', (req, res) => {
 });
 
 app.get('/admin', fetchDataMiddleware, (req, res) => {
+
     res.render('admin', { items: res.locals.items, schemes: res.locals.schemes, metalRates: res.locals.metalRates });
 });
 
@@ -176,14 +180,18 @@ app.post('/updateRates', (req, res) => {
                     } else {
                         if (fetchResults.length > 0) {
                             const latestRates = fetchResults[fetchResults.length - 1];
+                      
+                            // Initialize metalRates if not already set
+                            res.locals.metalRates = res.locals.metalRates || {};
+                      
                             res.locals.metalRates.newGoldRateValue24 = latestRates.rate24;
                             res.locals.metalRates.newGoldRateValue22 = latestRates.rate22;
                             res.locals.metalRates.newGoldRateValue18 = latestRates.rate18;
                             res.locals.metalRates.newSilverRateValue = latestRates.rateSil;
-
+                      
                             console.log('Rates fetched from the MySQL database');
                             res.redirect('/');
-                        } else {
+                          }  else {
                             console.log('No rates found in the MySQL database');
                             res.status(500).send('No rates found');
                         }
