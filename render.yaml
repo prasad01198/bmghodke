@@ -1,0 +1,9 @@
+services:
+  - name: bmghodke
+    buildCommand: go build -tags netgo -ldflags '-s -w' -o app
+    startCommand: ./app
+    env:
+      - key: NODE_VERSION
+        value: 21.5.0
+      - key: GO_VERSION
+        value: 1.21.6
