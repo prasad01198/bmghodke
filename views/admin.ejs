@@ -3,7 +3,7 @@
 
 <head>
 
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <!-- Basic -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,8 +20,11 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <!-- mdb -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -30,110 +33,163 @@
         rel="stylesheet">
     <!-- Custom styles for this template -->
 
-    <link href="/css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="/css/responsive.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <style>
+        #recentItemsContainer {
+            display: block;
+            opacity: 0;
+        }
+    </style>
 
 </head>
 
 <body>
-    <!-- header section strats -->
-    <header class="header_section">
-
-        <!-- rate display start -->
-        <div class="d-flex justify-content-end announcement_text rates-column">
-            <div class="p">
-                <div class="topbar_tooltip ">
-                    <span class="rates-heading">
-                        Metal Rates
-                    </span>
-                    <span class="topbar_tooltiptext" style="background-color:  #9D130F; margin-top :15px;">
-                        <div class="paragraph">
-                            <p><strong>Today's Metal Rates (Per gm in Rs.)</strong><br>
-                                *Rates may vary in reality, so confirm it on the phone
-                            </p>
-                        </div>
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr>
-                                    <td>Gold 24 KT</td>
-                                    <td id="rates-24">
-                                        <%= metalRates.newGoldRateValue24 %>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Gold 22 KT</td>
-                                    <td id="rates-22">
-                                        <%= metalRates.newGoldRateValue22 %>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Gold 18 KT</td>
-                                    <td id="rates-18">
-                                        <%= metalRates.newGoldRateValue18 %>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Silver</td>
-                                    <td id="rates-sil">
-                                        <%= metalRates.newSilverRateValue %>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </span>
-                </div>
-            </div>
-            <div class="p cta"><a href="tel:+917888124488"> <span class="mob-no">Call +91 7888124488</span></a>
-            </div>
+    <!-- Social media start -->
+    <section class="d-flex justify-content-center justify-content-lg-between pl-1 mt-1 border-bottom ">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span class="brand-name">मे श्री बाबुराव महादू घोडके सराफ</span>
         </div>
-        <!-- rate display end -->
 
+        <!-- Right -->
+        <div class="top-navbar">
+            <a href="tel:+91 7888124488" target="_blank" class="me-4 text-reset">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://www.facebook.com/BmGhodkeJewellers?mibextid=2JQ9oc" target="_blank"
+                class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/ms_baburao_mahadu_ghodke_saraf?igsh=aWF3eTgxemlpbzh4" target="_blank"
+                class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/7888124488" target="_blank" class="me-4 text-reset">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="" class="me-4 text-reset" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="admin-login" class="me-4 text-reset" target="_blank">
+                <i class="fas fa-circle-user"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Social media end -->
+
+    <!-- header section start -->
+    <header class="navbar sticky-top navbar-light border-bottom" style="background-color: #F8E8C7;">
         <!-- navigation start -->
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container justify-content-center">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link active"
-                            aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
-                            href="jewellery.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
-                            href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
-                            href="Schemes.html">what we offer</a>
-                    </li>
-                </ul>
-                <a href="index.html">
-                    <img src="/images/logo.png" alt="logo.png" class="logo">
-                </a>
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
-                            href="#manage">Manage pages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
-                            href="#products">Your listings</a>
-                    </li>
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
 
-                    <li class="nav-item">
-                        <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
-                            href="#schemes">Ongoing schemes</a>
-                    </li>
-                </ul>
+                <!-- Navigation items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" style="background-color: #F8E8C7;">
+                        <li class="nav-item">
+                            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link active"
+                                aria-current="page" href="\">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                                href="jewellery">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                                href="about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                                href="schemes">What We Offer</a>
+                        </li>
+                    </ul>
+                    <a href="/">
+                        <!-- <img src="images/logo.png" alt="logo.png" class="logo mx-auto reg-logo"> -->
+                        <img src="images/logo.png" alt="logo.png" class="logo mx-auto reg-logo">
+                    </a>
+                    <ul class="navbar-nav" style="background-color: #F8E8C7;">
+                        <li class="nav-item">
+                            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                                href="#manage">Manage Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                                href="#items">Your Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link"
+                                href="#schemes">Ongoing Schemes</a>
+                        </li>
+                        <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
+                            <!-- rate display start -->
+                            <div class="d-flex justify-content-end announcement_text rates-column"
+                                style="margin-right: 15px;">
+                                <div class="p">
+                                    <div class="topbar_tooltip ">
+                                        <span class="rates-heading">
+                                            Metal Rates
+                                        </span>
+                                        <span class="topbar_tooltiptext"
+                                            style="background-color:  #9D130F; margin-top :15px;">
+                                            <div class="paragraph">
+                                                <p><strong>Today's Metal Rates (Per gm in Rs.)</strong><br>
+                                                    *Rates may vary in reality, so confirm it on the phone
+                                                </p>
+                                            </div>
+                                            <table class="table table-borderless">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Gold 24 KT</td>
+                                                        <td id="rates-24">
+                                                            <%= metalRates.newGoldRateValue24 %>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gold 22 KT</td>
+                                                        <td id="rates-22">
+                                                            <%= metalRates.newGoldRateValue22 %>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gold 18 KT</td>
+                                                        <td id="rates-18">
+                                                            <%= metalRates.newGoldRateValue18 %>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Silver</td>
+                                                        <td id="rates-sil">
+                                                            <%= metalRates.newSilverRateValue %>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- rate display end -->
+                        </li>
+                    </ul>
 
+                </div>
             </nav>
         </div>
-        <!-- nevigation end -->
+        <!-- navigation end -->
     </header>
+    <a href="/" class="mobile-logo">
+        <img src="images/logo.png" alt="logo.png" class="logo mobile-logo">
+    </a>
     <!-- end header section -->
 
     <div class="container mt-4" id="manage">
@@ -300,75 +356,197 @@
     <div class="product-heading" style="font-size: 25px;" id="schemes">
         Listed Schemes
     </div>
-    <div id="schemesContainer" class="admin-scheme-display-container">
-        <% schemes.forEach(scheme=> { %>
-            <div class="admin-scheme-container">
-                <h2 class="admin-scheme-heading">
+    <div id="schemesContainer" class="index-scheme-container">
+        <% schemes.forEach((scheme, index)=> { %>
+            <div class="scheme-container">
+                <h2 class="scheme-title">
                     <%= scheme.title %>
                 </h2>
-                <% if (scheme.image1) { %>
-                    <img src="data:image/png;base64,<%= scheme.image1.toString('base64') %>"
-                        alt="<%= scheme.title %> Image 1">
+                <hr class="line">
+                <% if (scheme.description) { %>
+                    <div class="scheme-description">Description: <%= scheme.description %>
+                    </div>
                     <% } %>
-                        <% if (scheme.image2) { %>
-                            <img src="data:image/png;base64,<%= scheme.image2.toString('base64') %>"
-                                alt="<%= scheme.title %> Image 2">
-                            <% } %>
 
-                                <% if (scheme.image3) { %>
-                                    <img src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
-                                        alt="<%= scheme.title %> Image 3">
-                                    <% } %>
-                                        <% if (scheme.image4) { %>
-                                            <img src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
-                                                alt="<%= scheme.title %> Image 4">
+                        <div class="carousel" id="uniqueImageCarousel<%= index %>">
+                            <% if (scheme.image1) { %>
+                                <div class="carousel-item scheme-image active">
+                                    <img class="home-scheme-img" style="max-width: 100%;"
+                                        src="data:image/png;base64,<%= scheme.image1.toString('base64') %>"
+                                        alt="<%= scheme.title %> Image 1">
+                                </div>
+                                <% } %>
+                                    <% if (scheme.image2) { %>
+                                        <div class="carousel-item scheme-image">
+                                            <img class="home-scheme-img" style="max-width: 100%;"
+                                                src="data:image/png;base64,<%= scheme.image2.toString('base64') %>"
+                                                alt="<%= scheme.title %> Image 2">
+                                        </div>
+                                        <% } %>
+                                        <% if (scheme.image3) { %>
+                                            <div class="carousel-item scheme-image">
+                                                <img class="home-scheme-img" style="max-width: 100%;"
+                                                    src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
+                                                    alt="<%= scheme.title %> Image 3">
+                                            </div>
                                             <% } %>
-                                                <% if (scheme.description) { %>
-                                                    <p>Description: <%= scheme.description %>
-                                                    </p>
-                                                    <% } %>
-
-                                                        <div class="admin-buttons-container">
-                                                            <button class="scheme-delete-btn"
-                                                                onclick="deleteScheme('<%= scheme.id %>')">Delete</button>
-                                                            <button class="scheme-edit-btn"
-                                                                onclick="editDescription('<%= scheme.id %>')">Edit
-                                                                Description</button>
-                                                        </div>
+                                            <% if (scheme.image4) { %>
+                                                <div class="carousel-item scheme-image">
+                                                    <img class="home-scheme-img" style="max-width: 100%;"
+                                                        src="data:image/png;base64,<%= scheme.image4.toString('base64') %>"
+                                                        alt="<%= scheme.title %> Image 4">
+                                                </div>
+                                                <% } %>
+                        </div>
             </div>
             <% }); %>
     </div>
     <!-- Schemes Container End -->
 
-    <!-- Metal Rates Display -->
-    <div class="col-md-3 pt-2 work-form">
-        <div class="heading_container">
-            <h2>
-                Metal Rates
-            </h2>
-        </div>
-        <hr class="line">
-        <div>
-            <p>24 CT: <span id="rates-24">
-                    <%= metalRates.newGoldRateValue24 %>
-                </span></p>
-            <p>22 CT: <span id="rates-22">
-                    <%= metalRates.newGoldRateValue22 %>
-                </span></p>
-            <p>18 CT: <span id="rates-18">
-                    <%= metalRates.newGoldRateValue18 %>
-                </span></p>
-            <p>Silver: <span id="rates-sil">
-                    <%= metalRates.newSilverRateValue %>
-                </span></p>
-        </div>
-    </div>
-    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="tel:+91 7888124488" target="_blank" class="me-4 text-reset">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://www.facebook.com/BmGhodkeJewellers?mibextid=2JQ9oc" target="_blank"
+                    class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ms_baburao_mahadu_ghodke_saraf?igsh=aWF3eTgxemlpbzh4" target="_blank"
+                    class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/7888124488" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="" class="me-4 text-reset" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="" class="me-4 text-reset" target="_blank">
+                    <i class="fas fa-circle-user"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column address -->
+                    <div class="col-md-6 col-lg-4 col-xl-4 mx-auto mb-4">
+                        <!-- Links -->
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Address
+                        </h5>
+                        <p>
+                            Zenda Chowk, Bazaar Peth, <br>
+                            Lasalgaon, Tel-Niphad, <br>
+                            Dist-Nashik, Maharashtra 422306
+                        </p>
+                    </div>
+                    <!-- Grid column address -->
+
+                    <!-- Grid column contact -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h5 class="text-uppercase fw-bold mb-4">Contact</h5>
+                        <hr>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            <a class="text-reset" href="mailto:info@example.com">bmg.saraf@gmail.com</a>
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> <a class="text-reset" href="tel:+91 7888124488">+91
+                                7888124488</a></p>
+                    </div>
+                    <!-- Grid column contact -->
+
+                    <!-- Grid column products -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h5>
+                        <p>
+                            <a href="jewellery#Regular" class="text-reset">Regular</a>
+                        </p>
+                        <p>
+                            <a href="jewellery#Temple" class="text-reset">Temple</a>
+                        </p>
+                        <p>
+                            <a href="jewellery#Kundan" class="text-reset">Kundan</a>
+                        </p>
+                        <p>
+                            <a href="jewellery#Diamond" class="text-reset">Diamond</a>
+                        </p>
+                        <p>
+                            <a href="jewellery#Kisna" class="text-reset">Kisna</a>
+                        </p>
+                        <p>
+                            <a href="jewellery#Silver" class="text-reset">Silver</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column products -->
+
+                    <!-- Grid column navigation -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h5>
+                        <p>
+                            <a href="#!" class="text-reset">Home</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">About Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Our Products</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Our Schemes</a>
+                        </p>
+                    </div>
+                    <!-- Grid column navigation -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <section class="container-fluid footer_section" style="background-color: #F8E8C7;">
+            <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By
+                <a href="#">BMGhodakejewellers</a>
+            </p>
+        </section>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/back_to_top.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/js/custom.js"></script>
     <script>
         function deleteItem(itemId) {
             // AJAX request to delete item

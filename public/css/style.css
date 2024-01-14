@@ -4,6 +4,19 @@ body {
   background-color: #F8E8C7;
 }
 
+header{
+  height: 135px;
+}
+
+.mobile-logo{
+  display: none;
+}
+
+#navbarNav{
+  margin-top: -30px;
+}
+
+
 .layout_padding {
   padding: 75px 0;
 }
@@ -29,24 +42,19 @@ body {
   padding-top: 75px;
 }
 
+/* marquee start */
+.floating-text{
+  font-weight: 600;
+}
+/* marquee end */
+
 .layout_padding-bottom {
   padding-bottom: 75px;
 }
 
-.top-nav-main {
-  border-bottom: 15px solid rgba(255, 255, 107, 0.363);
-}
-
-.top-navbar {
-  font-weight: bold;
-  width: 600px;
-  border-radius: 20px;
-  margin-left: 550px;
-  background-color: #F5F4C9;
-}
-
 .brand-name {
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: 700;
   color: #9D130F;
 }
 
@@ -71,11 +79,6 @@ body {
   }
 }
 
-.header_section {
-  border-bottom: 1px solid black;
-  animation: pulsate 2s infinite;
-  /* Apply the pulsating animation with a duration of 2 seconds */
-}
 
 .rates-heading {
   font-weight: 400;
@@ -602,7 +605,8 @@ a:focus {
 
 
 .scheme-img {
-  width: 355px;
+  width: 100%;
+  max-width: 355px;
   height: 300px;
   border-top: 2px groove rgb(150, 29, 29);
 
@@ -821,6 +825,8 @@ a:focus {
 
 .contact_section {
   position: relative;
+  border-bottom: 5px solid black;
+  animation: pulsate 3s infinite;
 }
 
 .contact_section .design-box {
@@ -1101,7 +1107,6 @@ a:focus {
 }
 
 
-
 .corosal-style {
   border: 1px solid black;
   width: 100%;
@@ -1127,7 +1132,7 @@ a:focus {
 
 
 .image-overlay:hover {
-  transform: scale(1.6, 1.6);
+  transform: scale(1.2, 1.2);
   transition: 1s;
   transition-timing-function: ease-out;
 }
@@ -1350,14 +1355,6 @@ a:focus {
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
   background-image: url(../images/menu.png);
   background-size: 45px;
-}
-
-.top-navbar {
-  font-weight: bold;
-  width: 600px;
-  border-radius: 20px;
-  margin-left: 550px;
-  background-color: #F5F4C9;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -1610,8 +1607,9 @@ label {
 }
 
 .scheme-container {
-  width: 555px;
-  padding: 5px;
+    width: 100%; /* Make it full width */
+    max-width: 555px; /* Set maximum width */
+    padding: 5px;
 }
 
 .scheme-title {
@@ -1836,6 +1834,12 @@ label {
 /* Show the button when scrolling down */
 body.show-back-to-home .back-to-home-button {
   display: block;
+}
+
+.address-heading{
+  font-weight: 100;
+  font-family: monospace;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,26 @@
 @media (max-width: 1120px) {}
 
+
+@media (max-width: 992px) {
+  .reg-logo {
+      display: none;
+  }
+
+  .floating-text{
+    display: none;
+  }
+
+  .mobile-logo {
+      display: block;
+      margin-left: 50px;
+      margin-top: -20px;
+  }
+  header{
+    height: auto;
+  }
+}
+
+
 @media (max-width: 992px) {
 
   .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
@@ -25,7 +46,11 @@
     background-position: top left;
     height: auto;
   }
+  
 
+  .top-navbar{
+    display: none;
+  }
 
 .header_section{
   height: 350px;
@@ -104,7 +129,14 @@
   .client_section .carousel-control-next {
     display: none;
   }
+
+  .top-navbar{
+    display: none;
+  }
+
 }
+
+
 
 @media (max-width: 420px) {
   .slider_section .detail_box h1 {
@@ -118,6 +150,10 @@
   .heading_container h2::before {
     display: none;
   }
+  .top-navbar{
+    display: none;
+  }
+
 }
 
 @media (max-width: 360px) {}
@@ -202,15 +238,11 @@
   }
 
   .rates-column{
-    margin-left: -25px;
+    margin-left: 250px;
   }
 }
 
 @media (max-width: 438px) {
-  .topbar_tooltip {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
 
   .cta.p {
     padding-right: 5px;
@@ -221,6 +253,10 @@
     left: auto;
     right: 0;
   }
+  .top-navbar{
+    display: none;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -310,21 +346,16 @@
 @media (max-width: 768px) {
   .back-to-home-button {
     bottom: 10px;
-    right: 10px;
+    right: 20px;
   }
 
-  .back-to-home-button img {
-    width: 150px; /* Adjust the width for smaller screens */
-  }
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .back-to-home-button {
     bottom: 5px;
     right: 5px;
   }
 
-  .back-to-home-button img {
-    width: 120px; /* Further adjust the width for even smaller screens */
-  }
-}
+
+} */
