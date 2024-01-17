@@ -2,48 +2,48 @@
 <html>
 
 <head>
-
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <!-- Basic -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
     <!-- Site Metas -->
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title> मे श्री बाबुराव महादू घोडके सराफ</title>
+    <title>मे श्री बाबुराव महादू घोडके सराफ</title>
 
-    <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-    <!-- mdb -->
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- Bootstrap Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- fonts style -->
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Owl Carousel Stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- Fonts Styles -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap"
         rel="stylesheet">
-    <!-- Custom styles for this template -->
 
+    <!-- Custom Styles -->
     <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
+
+    <!-- Responsive Styles -->
     <link href="css/responsive.css" rel="stylesheet" />
 
+    <!-- Internal Styles -->
     <style>
         #recentItemsContainer {
             display: block;
             opacity: 0;
         }
     </style>
-
 </head>
 
 <body>
@@ -91,9 +91,8 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-align-justify"></i>
                 </button>
-
                 <!-- Navigation items -->
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse " id="navbarNav" style="margin-top: 5px;">
                     <ul class="navbar-nav" style="background-color: #F8E8C7;">
                         <li class="nav-item">
                             <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link active"
@@ -482,51 +481,56 @@
 
     <!-- Scheme 2 -->
     <div id="schemesContainer" class="index-scheme-container">
-        <% schemes.forEach((scheme, index)=> { %>
-            <div class="scheme-container">
-                <h2 class="scheme-title">
-                    <%= scheme.title %>
-                </h2>
-                <hr class="border-bottom">
-                <% if (scheme.description) { %>
-                    <div class="scheme-description">
-                        <%= scheme.description %>
-                    </div>
-                    <% } %>
-                        <div class="carousel" id="uniqueImageCarousel<%= index %>">
-                            <% if (scheme.image1) { %>
-                                <div class="carousel-item scheme-image active">
-                                    <img class="home-scheme-img" style="max-width: 100%;"
-                                        src="data:image/png;base64,<%= scheme.image1.toString('base64') %>"
-                                        alt="<%= scheme.title %> Image 1">
-                                </div>
-                                <% } %>
-                                    <% if (scheme.image2) { %>
-                                        <div class="carousel-item scheme-image">
-                                            <img class="home-scheme-img" style="max-width: 100%;"
-                                                src="data:image/png;base64,<%= scheme.image2.toString('base64') %>"
-                                                alt="<%= scheme.title %> Image 2">
-                                        </div>
-                                        <% } %>
-                                            <% if (scheme.image3) { %>
-                                                <div class="carousel-item scheme-image">
-                                                    <img class="home-scheme-img" style="max-width: 100%;"
-                                                        src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
-                                                        alt="<%= scheme.title %> Image 3">
-                                                </div>
-                                                <% } %>
-                                                    <% if (scheme.image4) { %>
-                                                        <div class="carousel-item scheme-image">
-                                                            <img class="home-scheme-img" style="max-width: 100%;"
-                                                                src="data:image/png;base64,<%= scheme.image4.toString('base64') %>"
-                                                                alt="<%= scheme.title %> Image 4">
-                                                        </div>
-                                                        <% } %>
+        <% if (schemes && schemes.length> 0) { %>
+            <% schemes.forEach((scheme, index)=> { %>
+                <div class="scheme-container">
+                    <h2 class="scheme-title">
+                        <%= scheme.title %>
+                    </h2>
+                    <hr class="border-bottom">
+                    <% if (scheme.description) { %>
+                        <div class="scheme-description">
+                            <%= scheme.description %>
                         </div>
-            </div>
-            <% }); %>
+                        <% } %>
+                            <div class="carousel" id="uniqueImageCarousel<%= index %>">
+                                <% if (scheme.image1) { %>
+                                    <div class="carousel-item scheme-image active">
+                                        <img class="home-scheme-img" style="max-width: 100%;"
+                                            src="data:image/png;base64,<%= scheme.image1.toString('base64') %>"
+                                            alt="<%= scheme.title %> Image 1">
+                                    </div>
+                                    <% } %>
+                                        <% if (scheme.image2) { %>
+                                            <div class="carousel-item scheme-image">
+                                                <img class="home-scheme-img" style="max-width: 100%;"
+                                                    src="data:image/png;base64,<%= scheme.image2.toString('base64') %>"
+                                                    alt="<%= scheme.title %> Image 2">
+                                            </div>
+                                            <% } %>
+                                                <% if (scheme.image3) { %>
+                                                    <div class="carousel-item scheme-image">
+                                                        <img class="home-scheme-img" style="max-width: 100%;"
+                                                            src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
+                                                            alt="<%= scheme.title %> Image 3">
+                                                    </div>
+                                                    <% } %>
+                                                        <% if (scheme.image4) { %>
+                                                            <div class="carousel-item scheme-image">
+                                                                <img class="home-scheme-img" style="max-width: 100%;"
+                                                                    src="data:image/png;base64,<%= scheme.image4.toString('base64') %>"
+                                                                    alt="<%= scheme.title %> Image 4">
+                                                            </div>
+                                                            <% } %>
+                            </div>
+                </div>
+                <% }); %>
+                    <% } else { %>
+                        <p>No schemes available.</p>
+                        <% } %>
     </div>
     <!-- scheme 2 end -->
+
 
     <!-- client section -->
     <section id="testimonial" class="client_section">
@@ -546,7 +550,7 @@
                             <div class="client-id">
                             </div>
                             <div class="detail-box">
-                                <video class="test-video" src="videos/test1.mp4" controls poster="thumbnail.jpg"
+                                <video class="test-video" src="videos/test1.mp4" controls poster="videos/test1.mp4"
                                     width="640" height="360"></video>
                             </div>
                         </div>
@@ -556,7 +560,7 @@
                             <div class="client-id">
                             </div>
                             <div class="detail-box">
-                                <video class="test-video" src="videos/test2.mp4" controls poster="thumbnail.jpg"
+                                <video class="test-video" src="videos/test2.mp4" controls poster="videos/test2.mp4"
                                     width="640" height="360"></video>
                             </div>
                         </div>
@@ -566,7 +570,7 @@
                             <div class="client-id">
                             </div>
                             <div class="detail-box">
-                                <video class="test-video" src="videos/test1.mp4" controls poster="thumbnail.jpg"
+                                <video class="test-video" src="videos/test1.mp4" controls poster="videos/test1.mp4"
                                     width="640" height="360"></video>
                             </div>
                         </div>
@@ -772,14 +776,23 @@
     </footer>
     <!-- Footer -->
 
-    <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/back_to_top.js"></script>
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap JavaScript (Bootstrap 5) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
 </body>
+
 </html>

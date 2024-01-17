@@ -37,13 +37,6 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 
-    <style>
-        #recentItemsContainer {
-            display: block;
-            opacity: 0;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -92,7 +85,7 @@
                 </button>
 
                 <!-- Navigation items -->
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav" style="margin-top: 5px;">
                     <ul class="navbar-nav" style="background-color: #F8E8C7;">
                         <li class="nav-item">
                             <a style="color: #9D130F; font-weight:600; font-size : 16px" class="nav-link active"
@@ -192,7 +185,7 @@
     </a>
     <!-- end header section -->
 
-    <div class="container mt-4" id="manage">
+    <div class="container mt-5" id="manage">
         <div class="row">
             <!-- Add Item Start -->
             <div class="col-md-4 pt-2 work-form">
@@ -352,6 +345,7 @@
                 <% }); %>
         </div>
     </div>
+
     <!-- Schemes Container Start -->
     <div class="product-heading" style="font-size: 25px;" id="schemes">
         Listed Schemes
@@ -383,22 +377,27 @@
                                                 alt="<%= scheme.title %> Image 2">
                                         </div>
                                         <% } %>
-                                        <% if (scheme.image3) { %>
-                                            <div class="carousel-item scheme-image">
-                                                <img class="home-scheme-img" style="max-width: 100%;"
-                                                    src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
-                                                    alt="<%= scheme.title %> Image 3">
-                                            </div>
-                                            <% } %>
-                                            <% if (scheme.image4) { %>
+                                            <% if (scheme.image3) { %>
                                                 <div class="carousel-item scheme-image">
                                                     <img class="home-scheme-img" style="max-width: 100%;"
-                                                        src="data:image/png;base64,<%= scheme.image4.toString('base64') %>"
-                                                        alt="<%= scheme.title %> Image 4">
+                                                        src="data:image/png;base64,<%= scheme.image3.toString('base64') %>"
+                                                        alt="<%= scheme.title %> Image 3">
                                                 </div>
                                                 <% } %>
+                                                    <% if (scheme.image4) { %>
+                                                        <div class="carousel-item scheme-image">
+                                                            <img class="home-scheme-img" style="max-width: 100%;"
+                                                                src="data:image/png;base64,<%= scheme.image4.toString('base64') %>"
+                                                                alt="<%= scheme.title %> Image 4">
+                                                        </div>
+                                                        <% } %>
                         </div>
-            </div>
+                    </div>
+                    <div class="admin-buttons-container">
+                        <button class="scheme-delete-btn" onclick="deleteScheme('<%= scheme.id %>')">Delete</button>
+                        <button class="scheme-edit-btn" onclick="editDescription('<%= scheme.id %>')">Edit
+                            Description</button>
+                    </div>
             <% }); %>
     </div>
     <!-- Schemes Container End -->

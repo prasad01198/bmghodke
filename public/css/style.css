@@ -5,15 +5,17 @@ body {
 }
 
 header{
-  height: 135px;
+  height: 170px;
 }
 
 .mobile-logo{
   display: none;
 }
 
+
 #navbarNav{
   margin-top: -30px;
+  margin-left: 100px;
 }
 
 
@@ -142,14 +144,6 @@ header{
   padding: 10px 30px;
   color: #F8E8C7;
   text-align: center;
-}
-
-.navbar-nav {
-  font-size: 20px;
-  font-weight: 600;
-  background-color: #f19d16;
-  border-radius: 150px;
-
 }
 
 a,
@@ -1130,6 +1124,11 @@ a:focus {
   gap: 30px;
 }
 
+.home-item img {
+  width: 230px;
+  height: 220px;
+}
+
 
 .image-overlay:hover {
   transform: scale(1.2, 1.2);
@@ -1137,10 +1136,6 @@ a:focus {
   transition-timing-function: ease-out;
 }
 
-.home-item img {
-  width: 230px;
-  height: 220px;
-}
 
 .product-item:hover {
   background-color: #ecca8761;
@@ -1229,103 +1224,12 @@ a:focus {
   border-radius: 0;
 }
 
-/* .custom_menu-btn button {
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border: none;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: transparent;
-  position: relative;
-  z-index: 999;
-  margin: 0;
-} */
-
-/* .custom_menu-btn button span {
-  display: block;
-  width: 30px;
-  height: 5px;
-  background-color: #000000;
-  margin: 2.5px 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border-radius: 15px;
-} */
-
-/* .custom_menu-btn .s-2 {
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
-}
-
-.custom_menu-btn .s-2 {
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
-} */
-
-/* For responsive added extra at the place of above styles */
-
-.custom_menu-btn button {
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border: none;
-  border-radius: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  position: relative;
-  z-index: 999;
-  margin: 0;
-}
-
-.custom_menu-btn button span {
-  display: block;
-  width: 30px;
-  height: 5px;
-  background-color: #000000;
-  margin: 2.5px 0;
-  transition: all 0.3s;
-  border-radius: 15px;
-}
-
-.custom_menu-btn .s-2 {
-  transition: all 0.1s;
-}
-
-.custom_menu-btn .s-2 {
-  transition: all 0.1s;
-}
-
-/* till here */
-
-
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
   padding: 10px 30px;
   color: #F8E8C7;
   text-align: center;
 }
 
-.navbar-nav {
-  font-size: 20px;
-  font-weight: 600;
-  background-color: #f19d16;
-  border-radius: 150px;
-}
 
 .navbar-brand {
   display: -webkit-box;
@@ -1367,6 +1271,7 @@ a:focus {
   padding: 0;
   border: none;
 }
+
 
 .custom_nav-container {
   z-index: 99999;
@@ -1564,31 +1469,6 @@ label {
     height: 110px;
     /* margin-left: 15px; */
 }
-
-@media (min-width: 768px) {
-    /* Apply styles for screens larger than 768px width */
-    .admin-item,
-    .admin-scheme-container {
-        flex: 1; /* Take up available space */
-        max-width: none; /* Reset max-width for larger screens */
-    }
-
-    .scheme-delete-btn,
-    .scheme-edit-btn {
-        max-width: none; /* Reset max-width for larger screens */
-        margin-right: 15px;
-    }
-
-    .admin-items {
-        gap: 15px; /* Adjust the gap between items for larger screens */
-    }
-
-    .admin-item {
-        width: calc(25% - 20px); /* 25% width with 20px margin on each side */
-    }
-}
-
-
 
 /* scheme corsal style */
 .index-scheme-container {
