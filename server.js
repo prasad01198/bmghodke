@@ -6,7 +6,7 @@ const mysql = require('mysql2');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const connection = mysql.createConnection({
     host: 'mysql-38d2824e-bmghodkejewelers.a.aivencloud.com',
