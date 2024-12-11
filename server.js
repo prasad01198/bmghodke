@@ -9,11 +9,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const connection = mysql.createConnection({
-    host: 'mysql-38d2824e-bmghodkejewelers.a.aivencloud.com',
-    user: 'avnadmin',
-    password: 'AVNS_v-qbSU6D5fovblW2O97',
+    host: 'localhost',
+    user: 'root',
+    password: 'Prasad@1998',
     database: 'admin_bmg',
-    port : 22509,
+    port : 3306,
 });
 
 connection.connect((err) => {
@@ -180,10 +180,10 @@ app.post('/updateRates', (req, res) => {
                     } else {
                         if (fetchResults.length > 0) {
                             const latestRates = fetchResults[fetchResults.length - 1];
-                      
+                    
                             // Initialize metalRates if not already set
                             res.locals.metalRates = res.locals.metalRates || {};
-                      
+                        
                             res.locals.metalRates.newGoldRateValue24 = latestRates.rate24;
                             res.locals.metalRates.newGoldRateValue22 = latestRates.rate22;
                             res.locals.metalRates.newGoldRateValue18 = latestRates.rate18;
