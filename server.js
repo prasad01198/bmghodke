@@ -10,10 +10,10 @@ const port = process.env.PORT || 3000;
 
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: 'Prasad@1998',
-    database: 'admin_bmg',
-    port : 3306,
+    user: 'DB_USERNAME',
+    password: 'DB_PASSWORD',
+    database: 'DB_NAME',
+    port : PORT,
 });
 
 connection.connect((err) => {
